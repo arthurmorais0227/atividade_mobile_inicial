@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "App-ArthurMorais",
+    "slug": "app-arthurmorais",
+    "scheme": "app-arthurmorais",
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
