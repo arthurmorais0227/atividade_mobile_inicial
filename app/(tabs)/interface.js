@@ -1,9 +1,10 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 const arthurMoraisLogo = require("../../assets/pato.png");
+import {SafeAreaView} from "react-native-safe-area-context";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Image
         source={arthurMoraisLogo}
         style={styles.logo}
@@ -11,7 +12,7 @@ export default function App() {
       />
       <Text style={styles.title}>Bem-vindo ao app!</Text>
       <Text style={styles.subtitle}>Meu primeiro App com o Prof. Thiago!</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 

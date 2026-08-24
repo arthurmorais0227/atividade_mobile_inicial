@@ -1,5 +1,5 @@
 import { Link } from "expo-router";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const arthurMoraisLogo = require("../../assets/pato.png");
@@ -7,7 +7,7 @@ const arthurMoraisLogo = require("../../assets/pato.png");
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.hero}>
           <Image
             source={arthurMoraisLogo}
@@ -34,7 +34,7 @@ export default function HomeScreen() {
             <Text style={styles.buttonText}>Abrir modal de exemplo</Text>
           </Pressable>
         </Link>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#090922",
   },
   container: {
-    flex: 1,
     padding: 24,
     gap: 20,
   },
@@ -103,11 +102,12 @@ const styles = StyleSheet.create({
     color: "#ffffff",
   },
   button: {
+    marginBottom: 1,
     paddingVertical: 16,
     paddingHorizontal: 20,
     borderRadius: 16,
     alignItems: "center",
-    backgroundColor: "#102542",
+    backgroundColor: "#f0a7ff",
   },
   buttonText: {
     fontSize: 16,

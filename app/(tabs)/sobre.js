@@ -21,7 +21,7 @@ export default function ConfigScreen() {
         <Image
           style={styles.imagem}
           source={{
-            uri: "https://avatars.githubusercontent.com/u/201222799?v=4",
+            uri: "https://i.ibb.co/TBxjF0qZ/IMG-20260801-WA0030.jpg",
           }}
         />
 
@@ -57,6 +57,7 @@ export default function ConfigScreen() {
 
 const styles = StyleSheet.create({
   subtitulo: {
+    padding: 10,
     backgroundColor: "#090922",
     color: "#ffffff"
   },

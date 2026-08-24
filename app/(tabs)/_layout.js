@@ -12,7 +12,7 @@ export default function TabsLayout() {
           borderBottomColor: "#f0a7ff",
         },
         headerTitleStyle: {
-          color:"#ffffff",
+          color: "#ffffff",
           fontWeight: "bold"
         },
 
@@ -37,7 +37,7 @@ export default function TabsLayout() {
           title: "Início",
           headerTitle: "Projeto Base",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home-outline" size={size} color={color}/>
+            <Ionicons name="home-outline" size={size} color={color} />
           ),
         }}
       />
@@ -47,7 +47,7 @@ export default function TabsLayout() {
           title: "Aulas",
           headerTitle: "Conteúdo",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="book-outline" size={size} color={color}/>
+            <Ionicons name="book-outline" size={size} color={color} />
           ),
         }}
       />
@@ -57,7 +57,7 @@ export default function TabsLayout() {
           title: "Interface",
           headerTitle: "Interface",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="shapes-outline" size={size} color={color}/>
+            <Ionicons name="shapes-outline" size={size} color={color} />
           ),
         }}
       />
@@ -67,7 +67,27 @@ export default function TabsLayout() {
           title: "Sobre",
           headerTitle: "Sobre",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="information-circle-outline" size={size} color={color}/>
+            <Ionicons name="information-circle-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="api"
+        options={{
+          title: "API",
+          headerTitle: "API",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="cloud-download-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="post"
+        options={{
+          title: "Post",
+          headerTitle: "Publicações",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="create-outline" size={size} color={color} />
           ),
         }}
       />
