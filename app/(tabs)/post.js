@@ -27,6 +27,8 @@ export default function FilmesCriarScreen() {
     const [diretor, setDiretor] = useState("");
     const [duracaoMinutos, setDuracaoMinutos] = useState("");
     const [genero, setGenero] = useState("");
+    const [ano, setAno] = useState("");
+    const [nota, setNota] = useState("");
 
     const [enviando, setEnviando] = useState(false);
 
@@ -43,11 +45,13 @@ export default function FilmesCriarScreen() {
             const resposta = await api.post("/api/filmes", {
                 title: titulo,
                 description: descricao,
-                imageUrl: imagemUrl,
+                imageUrl: imagemUrl || null,
                 diretor: diretor,
                 duracao_minutos: isNaN(minutosFormatados) ? 120 : minutosFormatados,
                 genero: genero,
-                status: "Lançado"
+                status: "Lançado",
+                nota: Number(nota),
+                ano: Number(ano)
             });
 
             Alert.alert("Filme criado!", resposta.data.title);
@@ -57,6 +61,8 @@ export default function FilmesCriarScreen() {
             setDiretor("");
             setDuracaoMinutos("");
             setGenero("");
+            setAno("");
+            setNota("");
         } catch (e) {
             console.log("Erro da API:", e.response?.data || e.message);
 
@@ -124,6 +130,24 @@ export default function FilmesCriarScreen() {
                     value={genero}
                     onChangeText={setGenero}
                     placeholder="Ex: Drama"
+                />
+
+                <Text style={styles.rotulo}>Ano</Text>
+                <TextInput
+                    style={styles.campo}
+                    value={ano}
+                    onChangeText={setAno}
+                    placeholder="Ex: 1991"
+                    keyboardType="numeric"
+                />
+
+                <Text style={styles.rotulo}>Nota</Text>
+                <TextInput
+                    style={styles.campo}
+                    value={nota}
+                    onChangeText={setNota}
+                    placeholder="Ex: 8.5"
+                    keyboardType="decimal-pad"
                 />
 
                 <Pressable style={styles.botao} onPress={criarFilme} disabled={enviando}>
