@@ -55,7 +55,7 @@ export default function FilmesListarScreen() {
                             <View style={styles.info}>
                                 <Text style={styles.titulo}>{filme.title}</Text>
                                 <Text style={styles.categoria}>
-                                    {filme.category} · {filme.year}
+                                    {filme.genero} · {filme.ano}
                                 </Text>
                             </View>
                         </View>
