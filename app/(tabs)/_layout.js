@@ -12,6 +12,7 @@ const itensMenu = [
   { title: "Post", icon: "create-outline", path: "/post" },
   { title: "Delete", icon: "trash-outline", path: "/delete" },
   { title: "Update", icon: "refresh-outline", path: "/update" },
+  { title: "Buscar", icon: "search-outline", path: "/getbyid" },
 ];
 
 export default function TabsLayout() {
@@ -146,6 +147,16 @@ export default function TabsLayout() {
             headerTitle: "Atualizar Filme",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="refresh-outline" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="getbyid"
+          options={{
+            title: "By ID",
+            headerTitle: "Buscar Filme",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="search-outline" size={size} color={color} />
             ),
           }}
         />
