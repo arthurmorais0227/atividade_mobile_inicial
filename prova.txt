@@ -1,0 +1,17 @@
+Android Bundling failed 684ms node_modules\expo-router\entry.js (1245 modules)
+Unable to resolve "@expo/vector-icons" from "app\(tabs)\_layout.js"
+  1 | import { Tabs, router } from "expo-router";
+> 2 | import { Ionicons } from "@expo/vector-icons";
+    |                           ^
+  3 | import { Pressable, View, Text, StyleSheet, Animated } from "react-native";
+  4 | import { useEffect, useRef, useState } from "react";
+  5 |
+
+Import stack:
+
+ app\(tabs)\_layout.js
+ | import "@expo/vector-icons"
+
+ app (require.context)
+
+npx expo install @expo/vector-icons

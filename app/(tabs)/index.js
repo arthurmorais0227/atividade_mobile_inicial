@@ -1,19 +1,12 @@
 import { Link } from "expo-router";
-import { Image, Pressable, StyleSheet, Text, View, ScrollView } from "react-native";
+import { Pressable, StyleSheet, Text, View, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
-const arthurMoraisLogo = require("../../assets/pato.png");
 
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.hero}>
-          <Image
-            source={arthurMoraisLogo}
-            style={styles.logo}
-            resizeMode="contain"
-          />
           <Text style={styles.eyebrow}>Seja bem-vindo (a) ao meu APP!</Text>
           <Text style={styles.title}>Arthur Morais</Text>
           <Text style={styles.description}>

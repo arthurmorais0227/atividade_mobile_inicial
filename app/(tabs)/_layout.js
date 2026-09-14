@@ -11,6 +11,7 @@ const itensMenu = [
   { title: "API", icon: "cloud-download-outline", path: "/api" },
   { title: "Post", icon: "create-outline", path: "/post" },
   { title: "Delete", icon: "trash-outline", path: "/delete" },
+  { title: "Update", icon: "refresh-outline", path: "/update" },
 ];
 
 export default function TabsLayout() {
@@ -134,6 +135,17 @@ export default function TabsLayout() {
             headerTitle: "Excluir Filme",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="trash-outline" size={size} color={color} />
+            ),
+          }}
+        />
+
+        <Tabs.Screen
+          name="update"
+          options={{
+            title: "Update",
+            headerTitle: "Atualizar Filme",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="refresh-outline" size={size} color={color} />
             ),
           }}
         />
