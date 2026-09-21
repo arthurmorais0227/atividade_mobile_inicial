@@ -33,7 +33,7 @@ export default function FilmesCriarScreen() {
     const [enviando, setEnviando] = useState(false);
 
     async function criarFilme() {
-        if (!titulo) {
+        if (!titulo || titulo.length <= 3) {
             Alert.alert("Preencha pelo menos o título.");
             return;
         }

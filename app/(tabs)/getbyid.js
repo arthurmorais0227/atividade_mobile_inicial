@@ -102,7 +102,7 @@ export default function FilmesBuscarScreen() {
                         <View style={styles.info}>
                             <Text style={styles.titulo}>{filme.title}</Text>
                             <Text style={styles.categoria}>
-                                {filme.genero} · {filme.ano} · {filme.duracao_minutos} min
+                                {filme.genero} · {filme.ano} · {filme.genero} 
                             </Text>
                             {filme.diretor ? (
                                 <Text style={styles.detalhe}>Diretor: {filme.diretor}</Text>

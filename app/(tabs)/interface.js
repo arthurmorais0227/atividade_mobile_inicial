@@ -1,9 +1,15 @@
-import { Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
+const arthurMoraisLogo = require("../../assets/pato.gif");
 import {SafeAreaView} from "react-native-safe-area-context";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
+      <Image
+        source={arthurMoraisLogo}
+        style={styles.logo}
+        resizeMode="contain"
+      />
       <Text style={styles.title}>Bem-vindo ao app!</Text>
       <Text style={styles.subtitle}>Meu primeiro App com o Prof. Thiago!</Text>
     </SafeAreaView>
